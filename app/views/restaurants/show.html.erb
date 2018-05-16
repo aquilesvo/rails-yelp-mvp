@@ -19,7 +19,7 @@
   <strong>Reviews:</strong>
   <ul>
     <% @restaurant.reviews.each do |review| %>
-      <li><%= review.content %></li>
+      <li>"<%= review.content %>"   -   Rating: <%= review.rating %> </li>
     <% end %>
   </ul>
 </p>
@@ -27,3 +27,4 @@
 
 
 <%= link_to 'Back', restaurants_path %>
+<%= link_to 'Write a review', new_restaurant_review_path(@restaurant) %>
